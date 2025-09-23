@@ -1,0 +1,94 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+header { margin-bottom: 30px; }
+
+/* RGB animated header */
+.animate-text .text {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, violet, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% auto;
+  animation: rgbFlow 6s linear infinite;
+}
+@keyframes rgbFlow { 0% {background-position:0%} 100% {background-position:400%} }
+
+.intro { font-size: 1rem; max-width: 600px; margin: 10px auto; color: #ccc; }
+
+.tasks {
+  background: rgba(20,20,20,0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+.task { margin: 20px 0; }
+
+.task-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+/* Locked buttons */
+.task-btn.locked {
+  opacity: 0.3;
+  filter: blur(1.5px);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Glow animation for unlocked buttons */
+.task-btn.glow {
+  animation: glowAnim 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowAnim {
+  0% { box-shadow: 0 0 5px #fff; }
+  100% { box-shadow: 0 0 20px #00ffcc; }
+}
+
+/* Button colors */
+.subscribe-btn { background: linear-gradient(90deg,#ff0000,#cc0000); }
+.subscribe-btn:hover { transform: scale(1.05); }
+
+.like-btn { background: linear-gradient(90deg,#00c851,#007e33); }
+.like-btn:hover { transform: scale(1.05); }
+
+.watch-btn { background: linear-gradient(90deg,#4285f4,#34a853,#fbbc05,#ea4335); background-size:300% auto; }
+.watch-btn:hover { transform: scale(1.05); }
+
+#finalBtn {
+  margin-top: 20px;
+  background: linear-gradient(90deg,#ff0080,#7928ca,#2afadf);
+  padding: 14px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.4s;
+}
+#finalBtn.locked { opacity: 0.3; filter: blur(1.5px); cursor: not-allowed; }
+
+#timerText { margin-top: 10px; font-weight: 600; color: #00ffcc; }
+#finalMessage { margin-top: 20px; font-weight: 600; color: #00ffcc; }
+
+footer { margin-top: 40px; font-size: 0.8rem; color: #777; }

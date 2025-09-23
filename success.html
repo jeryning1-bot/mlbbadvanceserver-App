@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Successful</title>
+  <link rel="stylesheet" href="success.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="animate-text"><span class="text">✅ Application Submitted!</span></h1>
+    <p class="intro">Congratulations! Your application was received successfully.</p>
+  </header>
+
+  <main>
+    <section class="tasks">
+      <h2>Complete These Simple Tasks</h2>
+
+      <!-- Subscribe Button -->
+      <div class="task">
+        <p>🔔 Subscribe to our YouTube Channel</p>
+        <a href="https://youtube.com/@jerryeditsjg?si=_Q28DlhuuUJJVaP9" target="_blank" class="task-btn subscribe-btn">Subscribe</a>
+      </div>
+
+      <!-- Like Button -->
+      <div class="task">
+        <p>👍 Like our latest video</p>
+        <a href="https://youtu.be/InTCVOQlmno?si=zlnbrT4AHvJ63-iq" target="_blank" class="task-btn like-btn locked">Like Video</a>
+      </div>
+
+      <!-- Start Watching Button -->
+      <div class="task">
+        <p>📺 Watch the video for at least 2 minutes</p>
+        <a href="https://youtu.be/ipShhM_7c-k?si=Fs-yjC_dOliXDcL6" target="_blank" class="task-btn watch-btn locked" id="watchBtn">Start Watching</a>
+        <p id="timerText"></p>
+      </div>
+
+      <!-- Final Button -->
+      <button id="finalBtn" class="locked" onclick="finalStep()">✅ I Have Completed All Tasks</button>
+      <p id="finalMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>⚡ Thank you for supporting! Keep an eye on your email for updates. ⚡</p>
+  </footer>
+
+  <script src="success.js"></script>
+</body>
+</html>
